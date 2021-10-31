@@ -42,40 +42,49 @@ body{
     background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-size: 1rem 1rem;
     border:2px solid#ebebeb;
-    transition: all ease 2s;
+    transition: width ease 2s;
+    box-shadow: .5px 1.5px 3px rgb(0 0 0 / 50%);
 }
 
 .progress-bar .level.red-bar{
     background-color: #fe7667;
     border:2px solid#eeb0a6;
-    /* box-shadow: 1px 1px 3px rgb(0 0 0 / 30%); */
 }
 .progress-bar .level.green-bar{
     background-color: #bce47c;
     border:2px solid rgba(171,199,129,255);
-    /* box-shadow: 1px 1px 3px rgba(171,199,129,255); */
 }
 .progress-bar .level.white-bar{
     background-color: #fff;
     border:2px solid#e4e4e4;
-    /* box-shadow: 1px 1px 3px rgb(0 0 0 / 30%); */
 }
 .progress-bar .level.blue-bar{
     background-color: rgba(144,204,241,255);
     border:2px solid rgba(153,193,217,255);
-    /* box-shadow: 1px 1px 3px rgb(0 0 0 / 30%); */
 }
 .progress-bar .level.yellow-bar{
     background-color: #fbd875;
     border:2px solid #d2af53;
-    /* box-shadow: 1px 1px 3px rgba(171,199,129,255); */
 }
 .progress-bar .level .progress-number{
     font-size: 20px;
     margin-bottom: 0;
-    color: rgba(102,102,102,1);
+    color: #868686;
     transition: --num 2s;
     counter-set: num var(--num);
+    text-shadow: 0px 0px 0px rgb(255 255 255 / 30%), 0px -0.5px 0px rgb(0 0 0 / 75%);
+}
+.progress-bar .level.red-bar .progress-number{
+    color: #763632;
+}
+.progress-bar .level.green-bar .progress-number{
+    color: #56693b;
+}
+.progress-bar .level.blue-bar .progress-number{
+    color: #395f7a;
+}
+.progress-bar .level.yellow-bar .progress-number{
+    color: #7d6229;
 }
 .progress-bar .level .progress-number::after {
   content: counter(num);
