@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@property --num {
+    syntax: "<integer>";
+    initial-value: 50;
+    inherits: false;
+  }
+*{
+    padding: 0;
+    margin:0;
+}
+li, a{
+    list-style: none;
+    text-decoration:none ;
+}
+body{
+    max-width: 1400px;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+.progress-bars-wrapper{
+    width: 80%;
+}
+
+.progress-bars-wrapper .progress-bar{
+    margin-bottom: 40px;
+    height:40px;
+    background:#ebebeb;
+    width:100%;
+    border-radius: 20px;
+}
+.progress-bar .level{
+    height: calc(100% - 4px);
+    width: 50%;
+    border-radius: 20px;
+    display: flex;
+    padding-right: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+    border:2px solid#ebebeb;
+    transition: all ease 2s;
+}
+
+.progress-bar .level.red-bar{
+    background-color: #fe7667;
+    border:2px solid#eeb0a6;
+    /* box-shadow: 1px 1px 3px rgb(0 0 0 / 30%); */
+}
+.progress-bar .level.green-bar{
+    background-color: #bce47c;
+    border:2px solid rgba(171,199,129,255);
+    /* box-shadow: 1px 1px 3px rgba(171,199,129,255); */
+}
+.progress-bar .level.white-bar{
+    background-color: #fff;
+    border:2px solid#e4e4e4;
+    /* box-shadow: 1px 1px 3px rgb(0 0 0 / 30%); */
+}
+.progress-bar .level.blue-bar{
+    background-color: rgba(144,204,241,255);
+    border:2px solid rgba(153,193,217,255);
+    /* box-shadow: 1px 1px 3px rgb(0 0 0 / 30%); */
+}
+.progress-bar .level.yellow-bar{
+    background-color: #fbd875;
+    border:2px solid #d2af53;
+    /* box-shadow: 1px 1px 3px rgba(171,199,129,255); */
+}
+.progress-bar .level .progress-number{
+    font-size: 20px;
+    margin-bottom: 0;
+    color: rgba(102,102,102,1);
+    transition: --num 2s;
+    counter-set: num var(--num);
+}
+.progress-bar .level .progress-number::after {
+  content: counter(num);
+}
+.progress-bar .level .progress-number::before {
+    content: '%';
+    float:right;
+  }
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+.button-container button{
+    width:170px;
+    height:50px;
+    border-radius: 6px;
+    background-color: #2196f3;
+    border:none;
+    color:#fff;
+    outline:none;
+    font-size: 18px;
+    cursor:pointer;
+}
+@keyframes counter {
+  from {
+    --num: 50;
+  }
+  to {
+    --num: 100;
+  }
+}
