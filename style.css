@@ -36,7 +36,6 @@ body{
     width: 50%;
     border-radius: 20px;
     display: flex;
-    padding-right: 20px;
     justify-content: flex-end;
     align-items: center;
     background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -73,6 +72,7 @@ body{
     transition: --num 2s;
     counter-set: num var(--num);
     text-shadow: 0px 0px 0px rgb(255 255 255 / 30%), 0px -0.5px 0px rgb(0 0 0 / 75%);
+    padding-right: 15px;
 }
 .progress-bar .level.red-bar .progress-number{
     color: #763632;
